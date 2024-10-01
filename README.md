@@ -1,5 +1,5 @@
 # bswabe absract
-BSW-ABE base on c++, pbc lib. 具体实现原理及详细步骤可参考：
+BSW-ABE base on c++, pbc lib. 具体实现原理及详细步骤可参考：https://blog.csdn.net/weixin_42700740/article/details/142654384?spm=1001.2014.3001.5501
 
 # 1.依赖
 &#8196; &#8196; 依赖pbc,gmp,crypto库，需要安装PBC，Openssl库。

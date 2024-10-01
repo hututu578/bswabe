@@ -33,13 +33,11 @@ int main() {
     bswabe_setup(&pub, &msk);  // 初始化系统，生成公钥和主私钥
 
     cout<<endl<<"********************************************step2:密钥生成阶段***************************************************"<<endl;
-    std::vector<std::string> user_attrs = {"attr25", "attr6", "attr7s","attr1","attr7","attr83" };   // 定义用户属性集
-    // std::vector<std::string> user_attrs = {"attr4","attr2","attr3", "attr6"};   // 定义用户属性集
+    std::vector<std::string> user_attrs = {"attr25", "attr6", "attr7s","attr1","attr7","attr8" };   // 定义用户属性集
     BswabePrv* prv = bswabe_keygen(&pub, &msk, user_attrs);   // 生成用户私钥
 
     cout<<endl<<"********************************************step3:加密阶段***************************************************"<<endl;
     std::string policy = "attr1 attr2 attr3 attr4 1of2 2of2 1of2 attr5 attr6 attr7 attr8 1of2 2of2 1of2 2of2";   // 定义策略树
-    // std::string policy = "attr1 attr2 attr3 attr4 3of4";   // 定义策略树
     
     // 当前曲线最大加密长度为128 bytes，现在输入是140 bytes，但是后面解密只能恢复前面128 bytes
     string M_string = "cc11111111112222222222333333333344444444445555555555666666666677777777778aabbbbbbbbbbccccccccccddddddddddeeeeeeeeee33";
